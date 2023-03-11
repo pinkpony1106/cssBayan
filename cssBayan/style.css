@@ -1,0 +1,47 @@
+/*Обнуление__________________________________________________*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1.25;
+  font-size: 16px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+/*Обнуление__________________________________________________*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+._container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
