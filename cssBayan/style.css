@@ -39,9 +39,46 @@ body {
 /*Обнуление__________________________________________________*/
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
+  background-color: #ebb2e4;
 }
 ._container {
   max-width: 1920px;
   margin: 0 auto;
+  padding: 30px;
+}
+._container_content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-weight: 800;
+  font-size: 50px;
+  padding: 60px;
+}
+p {
+  font-weight: 700;
+  font-size: 30px;
+}
+.meme {
+  width: 100%;
+}
+.img_of_meme {
+  display: flex;
+  justify-content: center;
+}
+.img_of_meme img {
+  max-width: 700px;
+  border: 5px solid #000;
+}
+
+.icon_plus img {
+  width: 50px;
+}
+.p_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px;
 }
