@@ -1,0 +1,210 @@
+/*Обнуление__________________________________________________*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1.25;
+  font-size: 1rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+/*Обнуление__________________________________________________*/
+.wrapper {
+  min-height: 100%;
+  background-color: #ebb2e4;
+}
+._container {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+._container_content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  padding: 4rem;
+  border: 0.4rem solid #000;
+}
+
+p {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #db04c9;
+}
+.meme {
+  width: 100%;
+}
+.img_of_meme {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 6rem;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.img_of_meme img {
+  max-width: 80%;
+  border: 0.4rem solid #000;
+}
+
+.icon_plus img {
+  width: 3.5rem;
+}
+.icon_plus {
+  transition: transform 0.5s;
+  opacity: 0;
+}
+
+.p_icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.1rem 1rem;
+}
+
+label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  max-height: 6rem;
+  transition: 1s;
+  border-bottom: 0.3rem solid black;
+}
+
+input[type="radio"]:not(:checked) + label:active .img_of_meme {
+  transform: scale(1.11);
+}
+input[type="radio"]:not(:checked) + label:active p {
+  color: #db04c9;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  max-height: 100rem;
+}
+input[type="radio"]:checked + label .p_icon .icon_plus {
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked + label .p_icon p {
+  color: #000;
+}
+
+input[type="radio"]:checked + label .img_of_meme {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  ._container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  ._container {
+    max-width: 100%;
+    padding: 1.1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    padding: 1.1rem;
+    border: 0.3rem solid #000;
+  }
+  .p_icon {
+    padding: 0.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .icon_plus img {
+    width: 2.5rem;
+  }
+  label {
+    max-height: 4rem;
+  }
+  .img_of_meme img {
+    max-width: 100%;
+    border: 0.3rem solid #000;
+  }
+  .img_of_meme {
+    padding-bottom: 2rem;
+  }
+  .icon_plus {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  ._container {
+    padding: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .p_icon {
+    height: 4rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .icon_plus img {
+    width: 2rem;
+  }
+
+  .img_of_meme {
+    padding-bottom: 1.1rem;
+  }
+}
+
+@media (hover: hover) {
+  .accordion:hover .icon_plus {
+    opacity: 1;
+  }
+  .accordion:hover p {
+    color: #000;
+  }
+  label:hover {
+    max-height: 100rem;
+  }
+  label:hover .p_icon .icon_plus {
+    transform: rotate(45deg);
+  }
+  label:hover .img_of_meme {
+    opacity: 1;
+  }
+}
