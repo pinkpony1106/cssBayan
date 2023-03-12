@@ -58,9 +58,16 @@ h1 {
   padding: 60px;
   border: 5px solid #000;
 }
+.accordion:hover .icon_plus {
+  opacity: 1;
+}
+.accordion:hover p {
+  color: #000;
+}
 p {
   font-weight: 700;
   font-size: 30px;
+  color: #db04c9;
 }
 .meme {
   width: 100%;
@@ -79,8 +86,14 @@ p {
 .icon_plus img {
   width: 50px;
 }
+.icon_plus {
+  transition: transform 0.5s;
+  opacity: 0;
+}
+
 .p_icon {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 15px 20px 15px;
@@ -98,10 +111,25 @@ label {
 label:hover {
   max-height: 900px;
 }
+label:hover .p_icon .icon_plus {
+  transform: rotate(45deg);
+}
+input[type="radio"]:not(:checked) + label:active .img_of_meme {
+  transform: scale(1.11);
+}
+input[type="radio"]:not(:checked) + label:active p {
+  color: #db04c9;
+}
 
 input[type="radio"] {
   display: none;
 }
 input[type="radio"]:checked + label {
   max-height: 900px;
+}
+input[type="radio"]:checked + label .p_icon .icon_plus {
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked + label .p_icon p {
+  color: #000;
 }
